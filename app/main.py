@@ -9,12 +9,11 @@ def main():
     #
     server_socket = socket.create_server(("localhost", 6379), reuse_port=True)
     server_socket.accept() # wait for client
-    con, add = server_socket.accept()
-    
     connection, _ = server_socket.accept()
     connection.sendall(b"+PONG\r\n")
     
-    #with conn: git commit --allow-empty -m "[any message]"
+    #con, add = server_socket.accept()
+    #with conn: 
      #   conn.recv(1024)
      #   conn.send(pong.encode())
 
