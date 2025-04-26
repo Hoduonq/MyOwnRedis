@@ -13,7 +13,8 @@ def main():
     
     connection, _ = server_socket.accept()
     connection.sendall(b"+PONG\r\n")
-    #with conn: 
+    
+    #with conn: git commit --allow-empty -m "[any message]"
      #   conn.recv(1024)
      #   conn.send(pong.encode())
 
