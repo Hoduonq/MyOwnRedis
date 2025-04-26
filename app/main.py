@@ -11,9 +11,11 @@ def main():
     server_socket.accept() # wait for client
     con, add = server_socket.accept()
     
-    with conn: 
-        conn.recv(1024)
-        conn.send(pong.encode())
+    connection, _ = server_socket.accept()
+    connection.sendall(b"+PONG\r\n")
+    #with conn: 
+     #   conn.recv(1024)
+     #   conn.send(pong.encode())
 
 if __name__ == "__main__":
     main()
